@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWorld</title> <!-- Changed the title here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">TechWorld</a> <!-- Changed logo name here -->
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#image">Image</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="#login" class="login-link">Login</a></li> <!-- Login Link -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About TechWorld</h2> <!-- Updated title -->
+        <p>Welcome to TechWorld! Your hub for all things technology. Explore, learn, and innovate with us.</p> <!-- Updated paragraph -->
+    </section>
+
+    <!-- Image Section -->
+    <section id="image" class="image">
+        <h2>Our Latest Tech Innovations</h2> <!-- Updated title -->
+        <img src="https://via.placeholder.com/500" alt="Sample Image">
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <p>&copy; 2024 TechWorld. All rights reserved.</p> <!-- Updated footer -->
+    </footer>
+
+    <!-- Login Modal (Hidden by default) -->
+    <div id="login" class="login-modal">
+        <div class="login-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login to TechWorld</h2> <!-- Updated modal title -->
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Get the modal
+    var modal = document.getElementById('login');
+    var loginLink = document.querySelector('.login-link');
+    var closeBtn = document.querySelector('.close-btn');
+
+    // Show the modal when clicking the login link
+    loginLink.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    // Close the modal when clicking the close button
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal if the user clicks outside the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</html>
